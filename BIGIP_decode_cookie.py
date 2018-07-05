@@ -15,7 +15,7 @@ print "\n[*] Cookie to decode: %s\n" % cookie
 
 (cookie_name, cookie_value) = cookie.split('=')
 
-pool = re.search('^BIGipServer([.\w\.]*)', cookie_name)
+pool = re.search('^BIGipServer([0-9A-Za-z\-\.]*)', cookie_name)
 
 (host, port, end) = cookie_value.split('.')
 
